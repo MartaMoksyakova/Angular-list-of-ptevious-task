@@ -1,0 +1,51 @@
+<div class="panel">
+    <div class="form-inline">
+        <div class="form-group">
+            <div class="col-md-8">
+                <input [(ngModel)]="task" type="text" class="form-control"  placeholder = "Write task" />
+        </div>   
+            <div class="input-group-append">
+                <button *ngIf="isAdd" type="button" class="btn btn-success" (click)="addItem()">ADD</button>
+    </div>
+        </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Task</th>
+                <th>Check</th>
+                <th>Done/In progress</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of itemsArray; let i = index" >
+                <td>{{item.id}}</td>
+                <td>{{item.task}}</td>
+                <td><input [(ngModel)]="item.checkTask" type="checkbox"  /></td>
+                <td ><ng-container *ngIf="item.checkTask; else elseTemplate">
+                    <p class="text-success">done</p>
+                  </ng-container>
+                  <ng-template #elseTemplate>
+                    <p class="text-danger">in process</p> 
+                  </ng-template>
+                  </td>
+                <td><button [disabled]="item.checkTask" (click)="editeItem(i)" class="btn btn-warning">Edite</button></td>
+                <td><button [disabled] = "!item.checkTask" (click)="deleteItem(i)" class="btn btn-danger">Delete</button></td>           
+            </tr>
+
+            <tr class="table-danger" *ngIf="openEdit">
+                <th>{{done}}</th>
+                <td>
+                    <input type="text" class="form-control"  [(ngModel)]="nameOfTask" name="nameOfTask">
+                </td>
+                
+                <td><button type="button" (click)="saveEditItem(done)" class="btn btn-success"> Save </button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    </div>
+

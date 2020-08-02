@@ -1,0 +1,87 @@
+.main{
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainText{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 60%;
+    width: 60%;
+    background-color: rgb(228, 236, 236);
+    border-radius: 5px;     
+}   
+.badWords{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    height: 20%;
+}
+.bwColor{
+    color: red;
+}
+.invalid{
+    border-color: red;
+}
+form{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    height: 50px;
+}           
+input[type=text]{
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 5px;
+    padding: 0 15px 0 15px;
+    color: gray; 
+    font-size: 15px;
+    flex-grow: 4;
+}
+input[type=button] {
+    height: 40px;
+    width: 60px;
+    border-radius: 5px;
+}
+input[name=btnAdd]{
+    background-color: rgb(212, 188, 51);
+    margin-right: 15px;
+    flex-grow: 1;
+}
+input[name=btnReset]{
+    height: 40px;
+    background-color: rgb(202, 27, 62);
+    flex-grow: 1;
+}
+.textArea{
+    margin-bottom: 15px;
+    flex-grow: 2;
+}
+textarea{
+    resize: none;
+    width: 96%;
+    height: 100%;
+    padding: 10px;
+    color: gray;
+    font-size: 15px;
+    border-radius: 5px;
+}
+input[name=btnCenzor]{
+    width: 99%;
+    margin-top: 20px;
+    flex-grow: 1;
+    height: 40px;
+    background-color: rgb(53, 160, 53);
+    border-radius: 5px;
+}

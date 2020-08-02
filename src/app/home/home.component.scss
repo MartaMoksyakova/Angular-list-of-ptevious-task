@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
+}
+.block{
+    width: 33%;
+    border: 1px solid rgb(136, 135, 135);
+    border-radius: 10px;
+}
+.block:hover{
+    color: rgb(136, 136, 247);
+}
+.btn{
+    width: 100%;
+}
+img{
+    width: 100%;
+    height: 87%;
+    background-size: cover;
+}
+.user_list{
+    background-size: contain;
+}
